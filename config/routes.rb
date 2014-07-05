@@ -1,0 +1,2 @@
+get '/', to: 'home#index'
+

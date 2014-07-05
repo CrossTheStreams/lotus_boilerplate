@@ -1,7 +1,10 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    coderay (1.1.0)
     diff-lcs (1.2.5)
+    haml (4.0.5)
+      tilt
     http_router (0.11.1)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
@@ -20,6 +23,11 @@ GEM
       lotus-router (~> 0.1, >= 0.1.1)
       lotus-utils (~> 0.2)
       lotus-view (~> 0.2)
+    method_source (0.8.2)
+    pry (0.10.0)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.5.2)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
@@ -33,6 +41,7 @@ GEM
     rspec-mocks (3.0.2)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.2)
+    slop (3.5.0)
     tilt (2.0.1)
     url_mount (0.2.1)
       rack
@@ -41,5 +50,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  haml
   lotusrb
+  pry
   rspec

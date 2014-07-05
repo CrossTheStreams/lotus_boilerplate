@@ -1,14 +1,15 @@
-module BoilerPlate
-
+module Boilerplate
   module Controllers
     module Home
-      include Lotus::Controller
+      include Boilerplate::Controller
 
       action 'Index' do
         def call(params)
         end
       end
+
+
     end
   end
-
 end
+
