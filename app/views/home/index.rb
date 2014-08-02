@@ -4,6 +4,8 @@ module Boilerplate
 
       class Index
         include Boilerplate::View
+        layout :application
+
 
         def omg
           ["o","m","g"]

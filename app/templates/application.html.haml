@@ -1,0 +1,26 @@
+!!!
+%html
+%head
+  %title "#{page_title}"
+  %link{rel: 'stylesheet', type: 'text/css', href: '/stylesheets/bootstrap.min.css'}
+  %script{src: '/javascripts/jquery-1.11.1.min.js'}
+  %script{src: '/javascripts/bootstrap.min.js'}
+  %script{src: '/javascripts/underscore.min.js'}
+  %script{src: '/javascripts/backbone.min.js'}
+  %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+%body
+  -##fb-root For Facebook API, if needed
+  .navbar.navbar-inverse.navbar-fixed-top
+    .navbar-inner{style: 'height:40px'}
+      .container{style: 'height:40px'}
+        %a.navbar-brand{href: '#'} 
+          Lotus Boilerplate 
+        .nav-collapse.collapse
+          %ul.nav.navbar-nav
+            %li 
+              %a{href: 'https://github.com/CrossTheStreams/lotus_boilerplate', target: '_blank'} 
+                GitHub Repo
+  .container{style: 'margin-top:50px;'}
+    %h1 Hello there!
+    = yield 
+
