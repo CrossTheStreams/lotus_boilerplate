@@ -6,11 +6,9 @@ class Rename
   def self.rename_entries(directory)
     paths = paths_for_entries(directory)
     paths.each do |path|
-      is_directory = File.directory?(path)
       # future-proof against symlinks
-      is_sym_link = File.symlink?(path)
-      if !is_sym_link
-        if is_directory
+      if File.symlink?(path)
+        if File.directory?(path) 
           Rename.rename_entries(path)
         else
           Rename.find_and_replace_content(path)
