@@ -1,5 +1,3 @@
-require 'pry'
-
 class Rename
 
   NEW_NAME = ARGV[0]
