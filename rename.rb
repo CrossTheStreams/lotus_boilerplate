@@ -7,7 +7,7 @@ class Rename
     paths = paths_for_entries(directory)
     paths.each do |path|
       # future-proof against symlinks
-      if File.symlink?(path)
+      if !File.symlink?(path)
         if File.directory?(path) 
           Rename.rename_entries(path)
         else
